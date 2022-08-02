@@ -27,4 +27,5 @@ Questions to consider:
 * What other bits of information would you want to see? How might that information be acquired?
 * Are there improvements that you would like to make to the code to improve behavior or performance?
 * Are the optimizations within the configuration that could potentially reduce operational costs?
-* How could the data loss from the failures be addressed?
+* How could the data loss from the failures be addressed? 
+* Are there different tools and/or different ways of putting things together that would be more effective?
