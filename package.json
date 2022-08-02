@@ -1,0 +1,9 @@
+{
+  "name": "improvement-devops-scratch",
+  "description": "Deployment via serverless",
+  "dependencies": {
+    "serverless": "3.21.0",
+    "serverless-plugin-git-variables": "^5.2.0",
+    "serverless-python-requirements": "^5.4.0"
+  }
+}
