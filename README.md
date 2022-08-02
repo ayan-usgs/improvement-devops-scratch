@@ -27,7 +27,7 @@ Questions to consider:
 * What other pieces of information would you want to see? How might that information be acquired?
 * What are your thoughts on code quality and tests within the repo? What tools could be used to improve it?
 * Are there improvements that you would like to make to the code to improve behavior or performance?
-* Are the optimizations within the configuration that could potentially reduce operational costs?
+* Are there optimizations within the configuration that could potentially reduce operational costs?
 * How could the data loss from the failures be addressed? 
 * Are there different tools and/or different ways of putting things together that would be more effective?
 * Are there any other improvements that you can think of?
