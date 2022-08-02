@@ -3,7 +3,7 @@
 ## Background
 
 This repo contains two AWS Lambda functions intended to help with QA/QC of data coming
-from a UV-Vis spectrometer. Data from the spectrometer lands in an SQS and
+from a UV-Vis spectrophotometer. Data from the spectrometer lands in an SQS and
 subsequently triggers the data check Lambda function. If a data issue is
 identified, another Lambda is triggered to send a notification to lab staff.
 
