@@ -1,0 +1,56 @@
+service: quality-check
+useDotenv: true
+
+provider:
+  name: aws
+  region: us-south-94
+  stage: lab
+  runtime: python3.9
+  logRetentionInDays: 14
+  environment:
+    LOG_LEVEL: ERROR
+  deploymentBucket:
+    name: 'our-bucket'
+
+functions:
+
+  qualityCheck:
+    handler: qualitycheck.handler.data_quality_check_handler
+    role:
+      Fn::GetAtt: ['automatedQaRole', 'Arn']
+    memorySize: 512
+    events:
+      - sqs:
+          arn: arn:aws:sqs:us-south-94:0000000001:uv-vis-spec-output
+          batchSize: 1
+    environment:
+      NOTIFIER_LAMBDA_ARN:
+        Ref: ProblemNotifierLambdaFunction
+
+  problemNotifier:
+    handler: qualitycheck.handler.problem_notification_handler
+    role:
+      Fn::GetAtt: ['    automatedQaRole', 'Arn']
+    memorySize: 512
+
+    reservedConcurrency: ${self:custom.concurrency.${opt:stage}}
+    environment:
+      SMTP_SERVER: 'organization-custom-smtp-server.fake.gov'
+
+resources:
+  Resources:
+    automatedQaRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: automated-lab-data-qa-role
+        ManagedPolicyArns:
+          - arn:aws:iam::aws:policy/service-role/AWSLambdaRole
+          - arn:aws:iam::aws:policy/CloudWatchFullAccess
+        AssumeRolePolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+              Action: sts:AssumeRole
