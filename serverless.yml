@@ -7,8 +7,6 @@ provider:
   stage: lab
   runtime: python3.9
   logRetentionInDays: 14
-  environment:
-    LOG_LEVEL: ERROR
   deploymentBucket:
     name: 'our-bucket'
 
