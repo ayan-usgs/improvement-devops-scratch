@@ -13,7 +13,7 @@ Here are some observations that a developer has noticed regarding the system:
 
 * Runtimes for both Lambdas are about 200 ms. 
 * The quality check Lambda reports using 108 MB of memory on average.
-* The notification Lambda reports using 90 MB of memory of average.
+* The notification Lambda reports using 90 MB on memory of average.
 * The quality check Lambda works 99.9 % of the time.
 * The notification Lambda fails 10 % of the time. No one is notified after the 
 failure, and there's no record of the erroneous data.
