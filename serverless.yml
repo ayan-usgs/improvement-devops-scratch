@@ -32,8 +32,6 @@ functions:
     role:
       Fn::GetAtt: ['automatedQaRole', 'Arn']
     memorySize: 512
-
-    reservedConcurrency: ${self:custom.concurrency.${opt:stage}}
     environment:
       SMTP_SERVER: 'organization-custom-smtp-server.fake.gov'
 
