@@ -2,7 +2,7 @@
 
 ## Background
 
-This repo contains two Lambdas intended to help with QA/QC of data coming
+This repo contains two AWS Lambda functions intended to help with QA/QC of data coming
 from a UV-Vis spectrometer. Data from the spectrometer lands in an SQS and
 subsequently triggers the data check Lambda function. If a data issue is
 identified, another Lambda is triggered to send a notification to lab staff.
@@ -24,7 +24,7 @@ failure, and there's no record of the erroneous data.
 
 Questions to consider:
 
-* What other bits of information would you want to see? How might that information be acquired?
+* What other pieces of information would you want to see? How might that information be acquired?
 * Are there improvements that you would like to make to the code to improve behavior or performance?
 * Are the optimizations within the configuration that could potentially reduce operational costs?
 * How could the data loss from the failures be addressed? 
