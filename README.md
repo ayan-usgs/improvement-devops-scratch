@@ -30,3 +30,4 @@ Questions to consider:
 * Are the optimizations within the configuration that could potentially reduce operational costs?
 * How could the data loss from the failures be addressed? 
 * Are there different tools and/or different ways of putting things together that would be more effective?
+* Are there any other improvements that you can think of?
