@@ -52,3 +52,22 @@ resources:
                 Service:
                   - lambda.amazonaws.com
               Action: sts:AssumeRole
+        Policies:
+          - PolicyName: inter-lambda
+            PolicyDocument:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - lambda:Invoke*
+                    - lambda:Get*
+                  Resource: "*"
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!package.json'
+    - '!package-lock.json'
