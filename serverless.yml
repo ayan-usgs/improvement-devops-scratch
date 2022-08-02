@@ -30,7 +30,7 @@ functions:
   problemNotifier:
     handler: qualitycheck.handler.problem_notification_handler
     role:
-      Fn::GetAtt: ['    automatedQaRole', 'Arn']
+      Fn::GetAtt: ['automatedQaRole', 'Arn']
     memorySize: 512
 
     reservedConcurrency: ${self:custom.concurrency.${opt:stage}}
