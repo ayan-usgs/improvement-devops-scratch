@@ -25,6 +25,7 @@ failure, and there's no record of the erroneous data.
 Questions to consider:
 
 * What other pieces of information would you want to see? How might that information be acquired?
+* What are your thoughts on code quality within the repo? What tools could be used to improve it?
 * Are there improvements that you would like to make to the code to improve behavior or performance?
 * Are the optimizations within the configuration that could potentially reduce operational costs?
 * How could the data loss from the failures be addressed? 
