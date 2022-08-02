@@ -24,8 +24,8 @@ def data_quality_check_handler(event, context):
         msg = f'Absorbance for {sample_id} exceeds 1. Consider diluting the sample.'
         problem_detected = True
     elif not 0 < measured_value < 0.67:
-        msg = f'Absorbance for {sample_id} does not fall calibration ' \
-              f'curve range with a measured value of {measured_value}.'
+        msg = f'Absorbance for {sample_id} with a measured value of ' \
+              f'{measured_value} does not fall within the calibration curve'
         problem_detected = True
     else:
         pass

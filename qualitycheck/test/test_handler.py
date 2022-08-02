@@ -54,7 +54,7 @@ def test_high_data(mock_awslambda, high_abs_data):
 
 @mock.patch.dict('os.environ', {'AWS_REGION': 'us-south-94', 'NOTIFIER_LAMBDA_ARN': 'aws:arn:us-south-94:my-lambda'})
 @mock.patch('qualitycheck.handler.AwsLambda')
-def test_high_data(mock_awslambda, beyond_calibration_data):
+def test_beyond_calibration_data(mock_awslambda, beyond_calibration_data):
     al = mock.Mock()
     mock_awslambda.return_value = al
     event = {'Records': [{'body': json.dumps(beyond_calibration_data)}]}
@@ -65,7 +65,7 @@ def test_high_data(mock_awslambda, beyond_calibration_data):
         function_name='aws:arn:us-south-94:my-lambda',
         payload={
             'sampleId': '7030d623-cdfc-41ba-a39f-b43aac54193c',
-            'message': 'Absorbance for 7030d623-cdfc-41ba-a39f-b43aac54193c does not fall calibration curve range with a measured value of 0.94.'
+            'message': 'Absorbance for 7030d623-cdfc-41ba-a39f-b43aac54193c with a measured value of 0.94 does not fall within the calibration curve'
         }
     )
 
