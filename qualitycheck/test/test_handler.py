@@ -64,7 +64,7 @@ def test_beyond_calibration_data(mock_awslambda, beyond_calibration_data):
         function_name='aws:arn:us-south-94:my-lambda',
         payload={
             'sampleId': '7030d623-cdfc-41ba-a39f-b43aac54193c',
-            'message': 'Absorbance for 7030d623-cdfc-41ba-a39f-b43aac54193c with a measured value of 0.94 does not fall within the calibration curve'
+            'message': 'Absorbance for 7030d623-cdfc-41ba-a39f-b43aac54193c with a measured value of 0.94 does not fall within the calibration curve.'
         }
     )
 

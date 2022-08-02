@@ -25,7 +25,7 @@ def data_quality_check_handler(event, context):
         problem_detected = True
     elif not 0 < measured_value < 0.67:
         msg = f'Absorbance for {sample_id} with a measured value of ' \
-              f'{measured_value} does not fall within the calibration curve'
+              f'{measured_value} does not fall within the calibration curve.'
         problem_detected = True
     else:
         pass
