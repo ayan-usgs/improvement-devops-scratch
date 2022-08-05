@@ -29,6 +29,9 @@ failure, and there's no record of the erroneous data.
 
 ## Prompts
 
+Please submit you exercise responses to eread@usgs.gov either in the body of an email or in an attachment. Each 
+question maybe addressed with a few sentences or a short paragraph.
+
 Questions to consider:
 
 1. What is the purpose of the serverless.yml file?
